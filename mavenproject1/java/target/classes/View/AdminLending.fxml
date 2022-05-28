@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="789.0" prefWidth="1024.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.adminLendingController">
+  <tabs>
+    <Tab text="Lending Book">
+         <content>
+            <BorderPane prefHeight="444.0" prefWidth="971.0" style="-fx-background-color: white;">
+               <top>
+                  <HBox alignment="CENTER" styleClass="background2" stylesheets="@../../resources/styles/Styles.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="83.0" text="ID" textAlignment="CENTER" />
+                                    <TextField fx:id="lendID" editable="false" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="83.0" text="BookID" textAlignment="CENTER" />
+                                    <TextField fx:id="bookID" prefHeight="25.0" prefWidth="230.0" />
+                                    <Button fx:id="checkbookBtn" mnemonicParsing="false" onAction="#checkBook" prefHeight="33.0" prefWidth="72.0" text="CHECK" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="83.0" text="Book Name" textAlignment="CENTER" />
+                                    <TextField fx:id="book" editable="false" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="499.0" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="83.0" text="BookID" textAlignment="CENTER" />
+                                    <TextField fx:id="book2ID" prefHeight="25.0" prefWidth="230.0" />
+                                    <Button fx:id="checkbookBtn1" mnemonicParsing="false" onAction="#checkBook1" prefHeight="33.0" prefWidth="72.0" text="CHECK" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="83.0" text="Book Name" textAlignment="CENTER" />
+                                    <TextField fx:id="bookName1" editable="false" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="105.0" text="BookID" textAlignment="CENTER" />
+                                    <TextField fx:id="book3ID" prefHeight="25.0" prefWidth="233.0" />
+                                    <Button fx:id="checkbookBtn2" mnemonicParsing="false" onAction="#checkBook2" prefHeight="33.0" prefWidth="72.0" text="CHECK">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="45.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="105.0" text="Book Name" textAlignment="CENTER" />
+                                    <TextField fx:id="bookName2" editable="false" prefHeight="25.0" prefWidth="233.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="100.0" text="CardID" textAlignment="CENTER" />
+                                    <TextField fx:id="cardID" prefHeight="25.0" prefWidth="230.0" />
+                                    <Button fx:id="checkcardBtn" mnemonicParsing="false" onAction="#checkCard" prefHeight="33.0" prefWidth="72.0" text="CHECK" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="100.0" text="Student Name" textAlignment="CENTER" />
+                                    <TextField fx:id="studentName" editable="false" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="100.0" text="Class" textAlignment="CENTER" />
+                                    <TextField fx:id="studentClass" editable="false" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="100.0" text="StaffID" textAlignment="CENTER" />
+                                    <TextField fx:id="staffID" prefHeight="25.0" prefWidth="230.0" />
+                                    <Button fx:id="checkstaffBtn" mnemonicParsing="false" onAction="#checkStaff" prefHeight="33.0" prefWidth="72.0" text="CHECK" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="100.0" text="Staff Name" textAlignment="CENTER" />
+                                    <TextField fx:id="staffName" editable="false" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="100.0" text="Return Date" textAlignment="CENTER" />
+                                    <DatePicker fx:id="setReturn" editable="false" prefHeight="25.0" prefWidth="230.0" showWeekNumbers="true" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <VBox alignment="CENTER" prefHeight="239.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logoutOpen" prefHeight="55.0" prefWidth="110.0" style="-fx-background-radius: 5px;" text="BACK" />
+                              <Button fx:id="addBtn" defaultButton="true" mnemonicParsing="false" onAction="#addLendBtn" prefHeight="55.0" prefWidth="110.0" style="-fx-background-radius: 5px;" text="ADD" />
+                              <Button fx:id="updateBtn" defaultButton="true" mnemonicParsing="false" onAction="#updateLendBtn" prefHeight="55.0" prefWidth="110.0" style="-fx-background-radius: 5px;" text="UPDATE" />
+                              <Button fx:id="deleteBtn" defaultButton="true" mnemonicParsing="false" onAction="#removeLendBtn" prefHeight="55.0" prefWidth="110.0" style="-fx-background-radius: 5px;" text="DELETE" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center>
+               <bottom>
+                  <TableView fx:id="tableLend" prefHeight="322.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="t_ID" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="t_name" prefWidth="152.0" text="Student Name" />
+                        <TableColumn fx:id="t_create" prefWidth="170.0" text="Create Date" />
+                        <TableColumn fx:id="t_return" prefWidth="257.0" text="Return Date" />
+                        <TableColumn fx:id="t_staff" minWidth="0.0" prefWidth="185.0" text="Staff" />
+                        <TableColumn fx:id="t_total" prefWidth="184.0" text="Total" />
+                    </columns>
+                  </TableView>
+               </bottom>
+            </BorderPane>
+         </content>
+    </Tab>
+    <Tab text="Return">
+         <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <HBox alignment="CENTER" styleClass="background2" stylesheets="@../../resources/styles/Styles.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="60.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="102.0" text="LendID" textAlignment="CENTER" />
+                                    <TextField fx:id="RlendID" alignment="CENTER" prefHeight="31.0" prefWidth="183.0" />
+                                    <Button fx:id="checkreturnID" mnemonicParsing="false" onAction="#checkReturnStudent" prefHeight="33.0" prefWidth="87.0" text="SEARCH" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="60.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="102.0" text="CardID" textAlignment="CENTER" />
+                                    <TextField fx:id="RcardID" alignment="CENTER" prefHeight="31.0" prefWidth="270.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="60.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="102.0" text="Student Name" textAlignment="CENTER" />
+                                    <TextField fx:id="RstudentName" alignment="CENTER" editable="false" prefHeight="31.0" prefWidth="270.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="60.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="102.0" text="Class" textAlignment="CENTER" />
+                                    <TextField fx:id="RstudentClass" alignment="CENTER" editable="false" prefHeight="31.0" prefWidth="270.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="60.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="102.0" text="BookID" textAlignment="CENTER">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="RbookID" alignment="CENTER" prefHeight="31.0" prefWidth="183.0" />
+                                    <Button fx:id="checkRbookID" mnemonicParsing="false" onAction="#checkReturnBook" prefHeight="33.0" prefWidth="87.0" text="SEARCH" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="60.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="102.0" text="Book Name" textAlignment="CENTER" />
+                                    <TextField fx:id="Rbook" alignment="CENTER" editable="false" prefHeight="31.0" prefWidth="270.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="60.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="102.0" text="Author" textAlignment="CENTER" />
+                                    <TextField fx:id="RbookAuthor" alignment="CENTER" editable="false" prefHeight="31.0" prefWidth="270.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="60.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="102.0" text="Price" textAlignment="CENTER" />
+                                    <TextField fx:id="Rprice" alignment="CENTER" editable="false" prefHeight="31.0" prefWidth="270.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="230.0" prefWidth="92.0" spacing="50.0">
+                           <children>
+                              <Button fx:id="returnBook" mnemonicParsing="false" onAction="#ReturnBtn" prefHeight="55.0" prefWidth="91.0" text="Return" />
+                              <Button fx:id="clear" mnemonicParsing="false" onAction="#RclearALL" prefHeight="47.0" prefWidth="89.0" text="CLEAR" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+                     <children>
+                        <TableView fx:id="tableReturn">
+                           <columns>
+                              <TableColumn fx:id="r_ID" prefWidth="114.0" text="ID" />
+                              <TableColumn fx:id="r_name" prefWidth="364.0" text="Book Name" />
+                              <TableColumn fx:id="r_returndate" prefWidth="243.0" text="Return Date" />
+                              <TableColumn fx:id="r_status" prefWidth="302.0" text="Status" />
+                              <TableColumn fx:id="r_status1" prefWidth="241.0" text="Status" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </center>
+            </BorderPane>
+         </content>
+    </Tab>
+  </tabs>
+</TabPane>

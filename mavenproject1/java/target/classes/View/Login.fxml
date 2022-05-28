@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane prefHeight="478.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <ImageView fitHeight="503.0" fitWidth="757.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/res/images2.JPG" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-3.0" layoutY="101.0" prefHeight="396.0" prefWidth="407.0">
+         <children>
+            <Button fx:id="loginBtn" defaultButton="true" layoutX="54.0" layoutY="228.0" mnemonicParsing="false" onAction="#loginPressed" onMouseEntered="#onMouseEnter" onMouseExited="#onMouseExit" prefHeight="47.0" prefWidth="300.0" style="-fx-background-radius: 20px; -fx-background-color: #CD853F; -fx-border-color: #CD853F; -fx-text-fill: white; -fx-border-radius: 20px;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <CheckBox fx:id="checkbox" alignment="CENTER" layoutX="239.0" layoutY="177.0" mnemonicParsing="false" text="Remember me?" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </CheckBox>
+            <JFXTextField fx:id="username" focusColor="#e7e7e7" labelFloat="true" layoutX="54.0" layoutY="75.0" prefHeight="25.0" prefWidth="300.0" promptText="Username" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE" />
+            <Pane layoutX="406.0" prefHeight="304.0" prefWidth="1.0" style="-fx-background-color: rgba(255,255,255,0.3);" />
+            <Label fx:id="warning" alignment="CENTER" layoutX="52.0" layoutY="285.0" prefHeight="39.0" prefWidth="300.0" style="-fx-background-color: rgba(0,0,0,0.3); -fx-border-color: rgba(255,255,255,0.3); -fx-border-radius: 4; -fx-background-radius: 4;" text="Wrong username or password !!" textFill="#ffb600" visible="false" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="285.0">
+               <font>
+                  <Font name="Segoe UI Semibold" size="17.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <JFXPasswordField fx:id="password" focusColor="#e7e7e7" labelFloat="true" layoutX="54.0" layoutY="126.0" prefHeight="25.0" prefWidth="300.0" promptText="Password" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE" />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="2.0" layoutY="50.0" prefHeight="39.0" prefWidth="398.0" style="-fx-text-fill: WHITE;" text="Library Management System" textFill="WHITE" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="Segoe Print" size="22.0" />
+         </font>
+      </Label>
+      <Pane layoutX="81.0" layoutY="95.0" prefHeight="1.0" prefWidth="240.0" style="-fx-background-color: rgba(255,255,255,0.5);" />
+      <Pane layoutX="81.0" layoutY="50.0" prefHeight="1.0" prefWidth="240.0" style="-fx-background-color: rgba(255,255,255,0.5);" visible="false" />
+   </children>
+</AnchorPane>

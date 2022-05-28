@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="932.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AccountController">
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" styleClass="background2" stylesheets="@../../resources/styles/Styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <padding>
+                  <Insets left="20.0" right="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox>
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="195.0" prefWidth="270.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="20.0" prefWidth="70.0" text="ID" />
+                                    <TextField fx:id="id" editable="false" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="100.0" text="Username">
+                                       <HBox.margin>
+                                          <Insets left="-30.0" />
+                                       </HBox.margin></Label>
+                                    <TextField fx:id="userName" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="94.0" text="Password">
+                                       <HBox.margin>
+                                          <Insets left="-24.0" />
+                                       </HBox.margin></Label>
+                                    <TextField fx:id="userPass" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="100.0" text="Start Day" textAlignment="CENTER" />
+                                    <DatePicker fx:id="createday" editable="false" prefHeight="25.0" prefWidth="230.0" showWeekNumbers="true" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="100.0" text="Out of Day" textAlignment="CENTER" />
+                                    <DatePicker fx:id="outday" editable="false" prefHeight="25.0" prefWidth="230.0" showWeekNumbers="true" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="20.0" prefWidth="100.0" text="Staff ID" />
+                                    <ComboBox fx:id="staffID" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="60.0" text="Search by" />
+                        <RadioButton fx:id="namesearch" mnemonicParsing="false" selected="true" text="Name">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="searchbar" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="idsearch" mnemonicParsing="false" text="ID" toggleGroup="$searchbar" />
+                        <TextField fx:id="searchAccount" prefHeight="25.0" prefWidth="402.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="320.0" prefWidth="153.0" spacing="25.0">
+               <children>
+                  <Button fx:id="addBtn" alignment="CENTER" mnemonicParsing="false" onAction="#addAccountBtn" prefHeight="50.0" prefWidth="100.0" text="ADD" />
+                  <Button fx:id="removeBtn" alignment="CENTER" mnemonicParsing="false" onAction="#removeAccountBtn" prefHeight="50.0" prefWidth="100.0" text="REMOVE" />
+                  <Button fx:id="update" alignment="CENTER" mnemonicParsing="false" onAction="#updateAccountBtn" prefHeight="50.0" prefWidth="100.0" text="UPDATE" />
+                  <Button fx:id="clear" alignment="CENTER" mnemonicParsing="false" onAction="#clearALL" prefHeight="50.0" prefWidth="100.0" text="CLEAR" />
+                  <Button fx:id="searchBtn" defaultButton="true" mnemonicParsing="false" onAction="#searchBar" prefHeight="50.0" prefWidth="100.0" text="Search" />
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <TableView fx:id="tableAccount" prefHeight="255.0" prefWidth="882.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="t_id" prefWidth="79.0" text="ID" />
+          <TableColumn fx:id="t_name" minWidth="0.0" prefWidth="118.0" text="Name" />
+            <TableColumn fx:id="t_pass" minWidth="0.0" prefWidth="103.0" text="Password" />
+            <TableColumn fx:id="t_startdate" minWidth="0.0" prefWidth="155.0" text="Start Day" />
+            <TableColumn fx:id="t_outdate" minWidth="0.0" prefWidth="147.0" text="Out of Day" />
+            <TableColumn fx:id="t_staffName" prefWidth="137.0" text="Staff ID" />
+        </columns>
+      </TableView>
+   </bottom>
+   <top>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="menuBtn" onAction="#menuOpen" text="Menu" />
+                  <Label alignment="CENTER" text="Account" textAlignment="CENTER">
+                     <font>
+                        <Font name="Bookman Old Style Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

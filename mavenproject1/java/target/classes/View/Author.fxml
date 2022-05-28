@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="915.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AuthorController">
+   <center>
+      <HBox alignment="CENTER">
+         <children>
+            <ImageView fx:id="authorimg" fitHeight="200.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/res/person.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="215.0" prefWidth="720.0" styleClass="background2" stylesheets="@../../resources/styles/Styles.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="20.0" prefWidth="70.0" text="ID" />
+                                    <TextField fx:id="id" editable="false" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="20.0" prefWidth="70.0" text="Name" />
+                                    <TextField fx:id="authorName" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="20.0" prefWidth="70.0" text="Gender" />
+                                    <RadioButton fx:id="male" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="110.0" selected="true" text="Male" textAlignment="CENTER">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="searchbar" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="female" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="120.0" text="Female" textAlignment="CENTER" toggleGroup="$searchbar" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="20.0" prefWidth="70.0" text="DOB" />
+                                    <DatePicker fx:id="dob" editable="false" prefHeight="25.0" prefWidth="230.0" showWeekNumbers="true" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="20.0" prefWidth="70.0" text="Email" />
+                                    <TextField fx:id="authorEmail" prefHeight="25.0" prefWidth="230.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="203.0" prefWidth="120.0" spacing="25.0">
+                           <children>
+                              <Button fx:id="addBtn" alignment="CENTER" mnemonicParsing="false" onAction="#addAuthorBtn" prefHeight="50.0" prefWidth="100.0" text="ADD" />
+                              <Button fx:id="removeBtn" alignment="CENTER" mnemonicParsing="false" onAction="#removeAuthorBtn" prefHeight="50.0" prefWidth="100.0" text="REMOVE" />
+                              <Button fx:id="update" alignment="CENTER" mnemonicParsing="false" onAction="#updateAuthorBtn" prefHeight="50.0" prefWidth="100.0" text="UPDATE" />
+                              <Button fx:id="clear" alignment="CENTER" mnemonicParsing="false" onAction="#clearALL" prefHeight="50.0" prefWidth="100.0" text="CLEAR" />
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="11.0" right="9.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="60.0" text="Search by" />
+                        <RadioButton fx:id="namesearch" mnemonicParsing="false" selected="true" text="Name">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="searchbar1" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="idsearch" mnemonicParsing="false" text="ID" toggleGroup="$searchbar1" />
+                        <TextField fx:id="searchAuthor" prefHeight="25.0" prefWidth="395.0" />
+                        <Button fx:id="searchBtn" defaultButton="true" mnemonicParsing="false" onAction="#searchBar" prefHeight="30.0" prefWidth="100.0" stylesheets="@../../resources/styles/Styles.css" text="Search" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <TableView fx:id="tableAuthor" prefHeight="261.0" prefWidth="915.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="t_id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="t_name" prefWidth="194.0" text="Name" />
+            <TableColumn fx:id="t_gender" prefWidth="106.0" text="Gender" />
+            <TableColumn fx:id="t_dob" prefWidth="169.0" text="DOB" />
+            <TableColumn fx:id="t_email" prefWidth="173.0" text="Email" />
+        </columns>
+      </TableView>
+   </bottom>
+   <top>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="menuBtn" onAction="#menuOpen" text="Menu" />
+                  <Label alignment="CENTER" style="-fx-background-color: white;" text="Author">
+                     <font>
+                        <Font name="Bookman Old Style Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

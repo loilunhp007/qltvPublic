@@ -1,0 +1,32 @@
+.button {
+    -fx-font-weight: bold;
+}
+
+.background {
+    -fx-background-image: url("../res/background.jpg");
+    -fx-background-position: center;
+    -fx-background-size: 750px 550px;
+    -fx-background-repeat: no-repeat;
+}
+
+.background2 {
+    -fx-background-image: url("../res/background.jpg");
+    -fx-background-position: center;
+    -fx-background-size: 300;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: white;
+}
+
+.functionButton {
+    -fx-background-color : rgba(0,0,0,0);
+}
+
+.functionButton:hover {
+    -fx-background-color : rgba(0,0,0,0.2);
+}
+
+.hbox {
+    -fx-padding : 10px;
+    -fx-spacing : 15px; 
+}
+

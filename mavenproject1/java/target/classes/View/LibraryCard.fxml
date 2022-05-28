@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.cardController">
+   <center>
+      <HBox alignment="CENTER" styleClass="background2" stylesheets="@../../resources/styles/Styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="60.0" text="ID" />
+                        <TextField fx:id="id" editable="false" prefHeight="25.0" prefWidth="430.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="60.0" text="Name" />
+                        <TextField fx:id="name" prefHeight="25.0" prefWidth="430.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="60.0" text="DOB" />
+                        <DatePicker fx:id="dob" prefHeight="25.0" prefWidth="430.0" showWeekNumbers="true" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="60.0" text="Email" />
+                        <TextField fx:id="email" prefHeight="25.0" prefWidth="430.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" styleClass="hbox" stylesheets="@../../resources/styles/Styles.css">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="60.0" text="Class" />
+                        <TextField fx:id="studentclass" prefHeight="25.0" prefWidth="430.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="823.0" spacing="15.0">
+                     <children>
+                        <Label text="Search by" />
+                        <RadioButton fx:id="namesearch" mnemonicParsing="false" selected="true" text="Name">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="searchbar" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="idsearch" mnemonicParsing="false" text="ID" toggleGroup="$searchbar" />
+                        <TextField fx:id="bookSearch" prefHeight="25.0" prefWidth="430.0" />
+                        <Button defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Search" />
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </BorderPane.margin>
+            </VBox>
+            <VBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addCardBtn" prefHeight="50.0" prefWidth="98.0" text="ADD" />
+                  <Button fx:id="update" mnemonicParsing="false" onAction="#updateCardBtn" prefHeight="50.0" prefWidth="98.0" text="UPDATE" />
+                  <Button fx:id="removeBtn" mnemonicParsing="false" onAction="#removeCardBtn" prefHeight="50.0" prefWidth="98.0" text="REMOVE" />
+                  <Button fx:id="clear" mnemonicParsing="false" onAction="#clearALL" prefHeight="50.0" prefWidth="98.0" text="CLEAR" />
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <bottom>
+      <TableView fx:id="tableCard" prefHeight="401.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="t_ID" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="t_name" prefWidth="255.0" text="Name" />
+            <TableColumn fx:id="t_dob" prefWidth="253.0" text="Date of Birth" />
+            <TableColumn fx:id="t_email" prefWidth="270.0" text="Email" />
+            <TableColumn fx:id="t_class" prefWidth="169.0" text="Class" />
+         </columns>
+      </TableView>
+   </bottom>
+   <top>
+      <HBox alignment="CENTER" prefHeight="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="menuBtn" onAction="#menuOpen" text="Menu" />
+                  <Label text="Library Card">
+                     <font>
+                        <Font name="Bookman Old Style Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
